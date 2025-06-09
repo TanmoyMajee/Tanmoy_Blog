@@ -1,15 +1,46 @@
 import React ,{useState} from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { ToastContainer, toast } from 'react-toastify';
+import { ClipLoader } from "react-spinners";
+import axios from 'axios'
 
 function Contact() {
   const [name,setname]= useState('');
   const [email,setEmail]= useState('');
   const [msg,setMsg] = useState('');
-  
+  const [sending,setSending] = useState(false);
 
-  const handleSubmit = (e)=>{
+  const handleSubmit =async (e)=>{
     e.preventDefault();
-    console.log(name)
+    setSending(true);
+
+    const data={
+       service_id : 'service_11r7ivk',
+       template_id : 'template_4zcvil6',
+       user_id : 'a4czMi7Yp63ZTSFRt',
+       template_params : {
+          from_name:name,
+          to_name:'Tanmoy',
+          from_email:email,
+          to_email: 'tanmoymajee239@email.com',
+          message:msg
+       }
+    }
+
+    try {
+      const response =await axios.post("https://api.emailjs.com/api/v1.0/email/send",data)
+      console.log(response);
+      console.log(response.data);
+      setEmail('');
+      setMsg('');
+      setname('');
+      toast.success('Message Send Successfully')
+    } catch (error) {
+      toast.error('Message not Send Somethig went wrong')
+    }finally{
+      setSending(false);
+    }
+
   }
 
   return (
@@ -50,9 +81,12 @@ function Contact() {
                         className="w-full mt-2 px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required/>
                     </div>
-                    <button type='submit'
+                    <button type='submit' disabled={sending}
                       className='bg-blue-600 hover:bg-blue-800 py-2 px-6 rounded-lg w-full transition-colors duration-300  '>
-                        Send Message</button>
+                        {
+                          sending?(<ClipLoader  size={16} color="white" className="mr-2"/>):('Send Message')
+                        }
+                        </button>
                 </form>
             </div>
             <div className="space-y-6">
@@ -81,6 +115,7 @@ function Contact() {
             </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   )
 }

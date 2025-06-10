@@ -2,10 +2,10 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="bg-gray-900 text-white h-screen flex flex-col items-center justify-center px-6">
-      <div className="max-w-3xl text-center">
+    <div className=" flex flex-col items-center justify-center bg-gray-900 text-white  px-5 ">
+      <div className="max-w-3xl text-center pt-16">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Hi, I'm Tanmoy Majhi
+          Hi, I'm Tanmoy Majee
         </h1>
         <p className="text-xl sm:text-2xl mb-6">
           Developer | Problem Solver  | Student
@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
        <br/>
        <p>
-          I enjoy solving data-structure & algorithms problems. t helps in improving my problem-solving skills.
+          I enjoy solving data-structure & algorithms problems. that helps in improving my problem-solving skills.
        </p>
       </div>
       {/* div for dsa section  */}

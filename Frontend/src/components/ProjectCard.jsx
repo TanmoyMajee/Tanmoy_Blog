@@ -2,79 +2,95 @@ import React from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 
-function ProjectCard({ project }) {
+function ProjectCard1({project}) {
   return (
-    <div className='bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-8'>
-      {/* Text Content */}
-      <div className='flex-1'>
-        <h3 className='text-3xl font-bold text-white mb-3 flex items-center gap-2'>
-          <span className='text-blue-500 text-4xl mr-2'>•</span>
-          {project.title}
-        </h3>
-        <p className='text-gray-300 text-lg mb-4'>{project.description}</p>
-
-        {/* Links */}
-        <div className='flex items-center gap-4 mb-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-2.5 text-white bg-gray-700 px-6 py-6 rounded-lg'>
+      <div>
+        <h1 className='text-2xl font-bold'>{project.title}</h1>
+        <p className='px-1 py-1'>{project.description}</p>
+        <div className='flex gap-3.5 px-1 py-1 '>
+          {/* live Link  */}
           {project.liveLink && (
-            <a
-              href={project.liveLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300'
-            >
-              <HiOutlineExternalLink className='mr-2' />
-              Live Demo
-            </a>
-          )}
-          {project.githubLink && (
-            <a
-              href={project.githubLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex items-center text-gray-400 hover:text-gray-300 transition-colors duration-300'
-            >
-              <FaGithub className='mr-2' />
-              GitHub
-            </a>
-          )}
-        </div>
-
-        {/* Technologies */}
-        <div className='flex flex-wrap gap-2 mb-4'>
-          {project.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className='bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm'
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Date */}
-        <p className='text-gray-400 text-sm'>{project.date}</p>
-      </div>
-
-      {/* Video Demo / Image */}
-      <div className='flex-shrink-0 w-full md:w-1/3 flex justify-center items-center'>
-        {project.videoDemoLink ? (
-          <a
-            href={project.videoDemoLink}
+            <a 
+            href={project.liveLink}
             target='_blank'
             rel='noopener noreferrer'
-            className='block w-full h-48 bg-gray-700 rounded-lg overflow-hidden flex items-center justify-center text-gray-300 text-lg hover:bg-gray-600 transition-colors duration-300'
-          >
-            {/* You can replace this with an actual video embed or thumbnail */}
-            <span className="text-center">video demo</span>
-          </a>
-        ) : (
-          <div className='w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 text-lg'>
-            No video available
-          </div>
-        )}
+            className='flex items-center gap-2 text-blue-500'
+            >
+            <HiOutlineExternalLink/>
+            <h1>Live Demo</h1>
+          </a>)}
+          {/* git Huub Link */}
+          {
+            project.githubLink && (
+              <a
+                className='flex items-center gap-2'
+                target='_blank'
+                rel='noopener noreferrer'
+                href={project.githubLink}>
+                  <FaGithub/>
+                  <h1>GitHub</h1>
+              </a>
+            )
+          }
+        </div>
+        {/* TechNoloy */}
+       <div className='flex flex-wrap gap-1.5   px-1 py-1'>
+        {
+          project.technologies.map((e,i)=>(
+              <span key={i}
+              className='bg-gray-600 rounded-2xl px-2 py-0.5 text-sm'
+              >
+                {e}
+              </span>
+          ))
+        }
+       </div>
+        {/* Date */}
+        <div className=' px-1 py-1'>
+          {project.date}
+        </div>
       </div>
+      {/* <div className='bg-gray-600 rounded-lg text-center'>
+        <image src={project.img} >
+
+        </image>
+        {
+          project.video?(
+            <h1> Video Demo</h1>
+          ):(
+            <h1>
+              Working on Video Demo 
+            </h1>
+          )
+        }
+      </div> */}
+ <div className='bg-gray-600 rounded-lg text-center p-4'>
+  {project.img ? (
+    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+      <img 
+        src={project.img} 
+        alt={project.title}
+        className="w-full h-48 object-cover rounded-lg mb-4 hover:opacity-90 transition-opacity"
+      />
+    </a>
+  ) : (
+    <div className="w-full h-48 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+      <span className="text-gray-400 text-lg">No Image Available</span>
+    </div>
+  )}
+  {project.video ? (
+    <h1 className="text-white text-xl font-semibold">
+      Video Demo
+    </h1>
+  ) : (
+    <h1 className="text-white text-xl font-semibold">
+      Working on Video Demo
+    </h1>
+  )}
+</div>
     </div>
   )
 }
 
-export default ProjectCard
+export default ProjectCard1

@@ -31,34 +31,34 @@ const Hero = () => {
        </p>
       </div>
       {/* div for dsa section  */}
-      <div className="grid grid-cols-3  gap-6 md:gap-10 m-4 md:m-14">
+      <div className="grid grid-cols-3  gap-2  md:gap-6 mx-1 my-2.5 md:m-14 ">
         {/* leetcode section  */}
-        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto'>
+        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto  hover:bg-gray-700 hover:scale-110 transition-all'>
           <h2 className='text-l md:text-xl font-bold mb-2'>Leetcode</h2>
           <p className='text-gray-300'>
             Rating - 1500+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:text-blue-600'>
+          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>
 
-        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto'>
+        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto hover:bg-gray-700 hover:scale-110 transition-all'>
           <h2 className='text-l md:text-xl font-bold mb-2'>CodeChef</h2>
           <p className='text-gray-300'>
-            Rating - 1500+
+            Rating - 1400+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:text-blue-600'>
+          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>
 
-        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto'>
-          <h2 className=' md:text-xl font-bold mb-2'>CodeForce</h2>
+        <div className='bg-gray-800 p-4 rounded-lg w-full md:max-w-[300px] mx-auto  hover:bg-gray-700 hover:scale-110 transition-all'>
+          <h2 className=' text-l md:text-xl font-bold mb-2'>CodeForce</h2>
           <p className='text-gray-300'>
-            Rating - 1500+
+            Rating - 1000+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:text-blue-600'>
+          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>

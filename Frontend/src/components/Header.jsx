@@ -4,7 +4,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   return (
-    <div className=' flex justify-between items-center px-6 py-4 bg-gradient-to-r from-gray-900 to-gray-800 shadow-sm border-b border-amber-200 '>
+    <div className=' flex flex-col sm:flex-row sm:justify-between items-center 
+    px-6 py-4 bg-gradient-to-r from-gray-900 to-gray-800 shadow-sm border-b border-amber-200 gap-3 '>
       <Link
         to="/"
         className='text-3xl font-bold text-amber-800 hover:text-amber-900 duration-200'

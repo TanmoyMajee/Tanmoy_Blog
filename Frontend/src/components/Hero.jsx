@@ -38,7 +38,7 @@ const Hero = () => {
           <p className='text-gray-300'>
             Rating - 1500+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
+          <a href="https://leetcode.com/u/tanmoymajee239/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>
@@ -48,7 +48,7 @@ const Hero = () => {
           <p className='text-gray-300'>
             Rating - 1400+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
+          <a href="https://www.codechef.com/users/tanmoy_majee" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>
@@ -58,7 +58,7 @@ const Hero = () => {
           <p className='text-gray-300'>
             Rating - 1000+
           </p>
-          <a href="https://leetcode.com/TanmoyMajee/" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
+          <a href="https://codeforces.com/profile/Tanmoy_007?graphType=all" target='_blank' rel='noopener noreferrer' className='text-blue-500 text-sm md:text-lg hover:text-blue-600'>
             View Profile
           </a>
         </div>

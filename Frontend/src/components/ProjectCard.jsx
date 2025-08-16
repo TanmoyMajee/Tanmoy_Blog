@@ -4,7 +4,7 @@ import { HiOutlineExternalLink } from 'react-icons/hi'
 
 function ProjectCard1({project}) {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-2.5 text-white bg-gray-700 px-6 py-6 rounded-lg'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-2.5 text-white bg-gray-700 px-6 py-6 rounded-lg hover:scale-102 transition-all'>
       <div>
         <h1 className='text-2xl font-bold'>{project.title}</h1>
         <p className='px-1 py-1'>{project.description}</p>
